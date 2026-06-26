@@ -1,2 +1,2 @@
 # qa-studies
-Anotações do meu estudo de QA.
+Anotações, tarefas e projetos do meu estudo de QA.
