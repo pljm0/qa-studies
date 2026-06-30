@@ -1,7 +1,7 @@
 Plano de Testes
 
-Projeto: Saucedemo - Produtos 
-Sprint/Release: Sprint 1 
+Projeto: Saucedemo - Produtos   
+Sprint/Release: Sprint 1   
 Histórias incluídas: US-01, US-02.
 
 Riscos principais: Instabilidade do sistema, conexão com a internet indisponível e requisitos incompletos ou alterados durante os testes.
