@@ -7,10 +7,13 @@
 - ✅ Casos de Teste
 - ▶️ Execução dos Testes
 - 🖼️ Evidências da Execução
+- 🤖 Automação de Testes com Cypress
 
 ## Ferramentas utilizadas
 
 - Testes Manuais
+- Cypress
+- Javascript
 - Google Chrome
 - Markdown
 - Git/GitHub
