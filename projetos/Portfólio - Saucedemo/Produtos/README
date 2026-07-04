@@ -8,10 +8,13 @@
 - ▶️ Execução dos Testes
 - 🐞 Relatórios de Bugs
 - 🖼️ Evidências da Execução
+- 🤖 Automação de Testes com Cypress
 
 ## Ferramentas utilizadas
 
 - Testes Manuais
+- Cypress
+- Javascript
 - Google Chrome
 - Markdown
 - Git/GitHub
