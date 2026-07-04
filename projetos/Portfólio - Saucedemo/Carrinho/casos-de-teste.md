@@ -1,3 +1,5 @@
+Casos de Teste
+
 ID: CT-001  
 Título: Validar adição de produto ao carrinho e atualização de contador.  
 Pré-Condição: Usuário autenticado.  
