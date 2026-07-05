@@ -27,7 +27,7 @@ Executor: Pedro L.
 Resultado Obtido: Ao clicar no ícone de carrinho, página foi redirecionada e exibiu os produtos adicionados ao carrinho.  
 Status: Passou  
 BUG: N/A  
-Evidência: CARRINHO_CT-003_PASS_2026-07-03.mp4  
+Evidência: CARRINHO_CT-003_PASS_2026-07-03.mkv
 Data: 2026-07-03  
 
 ID: CT-004  
@@ -37,5 +37,5 @@ Executor: Pedro L.
 Resultado Obtido: Ao clicar no botão "Continue Shopping", foi redirecionado a página de produtos.  
 Status: Passou  
 BUG: N/A  
-Evidência: CARRINHO_CT-004_PASS_2026-07-03.mp4  
+Evidência: CARRINHO_CT-004_PASS_2026-07-03.mkv  
 Data: 2026-07-03  
