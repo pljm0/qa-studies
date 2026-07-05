@@ -7,7 +7,7 @@ Executor: Pedro L.
 Resultado Obtido: Após clicar no botão "Checkout", a página foi redirecionada para preencher informações de compra.
 Status: Passou
 BUG: N/A
-Evidência: CHECKOUT_CT-001_PASS_2026-07-05.mp4
+Evidência: CHECKOUT_CT-001_PASS_2026-07-05.mkv
 Data: 2026-07-05
 
 ID: CT-002
@@ -17,7 +17,7 @@ Executor: Pedro L.
 Resultado Obtido: Após preencher os campos de "First Name", "Last Name", "Postal Code", e clicar no botão "Continue", foi redirecionado para o resumo da compra.
 Status: Passou
 BUG: N/A
-Evidência: CHECKOUT_CT-002_PASS_2026-07-05.mp4
+Evidência: CHECKOUT_CT-002_PASS_2026-07-05.mkv
 Data: 2026-07-05
 
 ID: CT-003
@@ -57,7 +57,7 @@ Executor: Pedro L.
 Resultado Obtido: A mensagem "Error: Postal Code is required" foi exibida.
 Status: Passou
 BUG: N/A
-Evidência: CHECKOUT_CT-006_PASS_2026-07-05.mp4
+Evidência: CHECKOUT_CT-006_PASS_2026-07-05.mkv
 Data: 2026-07-05
 
 ID: CT-007
@@ -67,5 +67,5 @@ Executor: Pedro L.
 Resultado Obtido: O campo "Last Name" não permite inserir texto. Mesmo com o campo vazio, ao clicar no botão "Continue", o sistema redireciona para a página de resumo de compra. Em seguida, ao clicar no botão "Finish", nenhuma ação é concluída.
 Status: Falhou
 BUG: BUG-001
-Evidência: CHECKOUT_CT-008_FAIL_2026-07-05.mp4
+Evidência: CHECKOUT_CT-008_FAIL_2026-07-05.mkv
 Data: 2026-07-05
