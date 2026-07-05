@@ -24,4 +24,4 @@ Obtido: O campo "Last Name" não permite inserir texto. Mesmo com o campo vazio,
 Severidade: Alta
 Prioridade: Alta
 Ambiente: Navegador Chrome / Windows 11
-Evidência: CHECKOUT_CT-007_FAIL_2026-07-05.mp4
+Evidência: CHECKOUT_CT-007_FAIL_2026-07-05.mkv
