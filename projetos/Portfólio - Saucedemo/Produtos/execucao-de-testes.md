@@ -44,7 +44,8 @@ Título: Validar a ordenação de produtos por preço em ordem crescente.
 Ambiente: Chrome / Windows 11   
 Executor: Pedro L.   
 Resultado Obtido: Após selecionar a opção "Price (Low to High)", os produtos foram ordenados e exibidos corretamente.   
-Status: Passou BUG: N/A   
+Status: Passou  
+BUG: N/A   
 Evidência: PRODUTOS_CT-005_PASS_2026-06-30.png  
 Data: 2026-06-30
 
