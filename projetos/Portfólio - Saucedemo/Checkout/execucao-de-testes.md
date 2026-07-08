@@ -51,16 +51,26 @@ Evidência: CHECKOUT_CT-005_PASS_2026-07-05.png
 Data: 2026-07-05  
 
 ID: CT-006  
+Título: Validar exibição do resumo da compra.  
+Ambiente: Chrome / Windows 11  
+Executor: Pedro L.  
+Resultado Obtido: Foi exibido uma lista com os produtos adicionados ao carrinho e os campos "Item Total", "Tax" e "Total" e os botões "Finish" e "Cancel".  
+Status: Passou  
+BUG: N/A  
+Evidência: CHECKOUT_CT-006_PASS_2026-07-05.png  
+Data: 2026-07-05  
+
+ID: CT-007  
 Título: Validar a finalização de compra.  
 Ambiente: Chrome / Windows 11  
 Executor: Pedro L.  
 Resultado Obtido: A mensagem "Error: Postal Code is required" foi exibida.  
 Status: Passou  
 BUG: N/A  
-Evidência: CHECKOUT_CT-006_PASS_2026-07-05.mkv  
+Evidência: CHECKOUT_CT-007_PASS_2026-07-05.mkv  
 Data: 2026-07-05  
 
-ID: CT-007  
+ID: CT-008  
 Título: Validar comportamento do checkout com usuário error_user.  
 Ambiente: Chrome / Windows 11  
 Executor: Pedro L.  
