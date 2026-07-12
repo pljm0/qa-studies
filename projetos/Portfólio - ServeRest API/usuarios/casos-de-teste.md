@@ -57,6 +57,14 @@ Status Esperado: 200 OK
 Resultado Esperado: Retornar um objeto json contendo um campo "message" com a mensagem "Nenhum registro excluído".
 
 ID: API-CT008 
+Título: Validar a remoção de usuário com carrinho atribuído. 
+Método: DELETE 
+Endpoint: {{baseUrl}}/usuarios/{_id}
+Pré-Condições: Deve haver um carrinho atribuído ao usuário. 
+Status Esperado: 400 Bad Request
+Resultado Esperado: Retornar um objeto json contendo um campo "message" com a mensagem "Não é permitido excluir usuário com carrinho cadastrado".
+
+ID: API-CT009 
 Título: Editar campos dos usuários. 
 Método: PUT 
 Endpoint: {{baseUrl}}/usuarios/{_id}
@@ -64,7 +72,7 @@ Pré-Condições: Usuário deve estar cadastrado no sistema.
 Status Esperado: 200 OK
 Resultado Esperado: Retornar um objeto json contendo um campo "message" com a mensagem "Alterado com sucesso".
 
-ID: API-CT009 
+ID: API-CT0010 
 Título: Ao tentar editar usuário inexistente, deve-se cadastrar o usuário. 
 Método: PUT 
 Endpoint: {{baseUrl}}/usuarios/{_id}
@@ -72,7 +80,7 @@ Pré-Condições: Nenhuma.
 Status Esperado: 201 Created
 Resultado Esperado: Retornar um objeto json contendo um campo "message" com a mensagem "Cadastro realizado com sucesso" e um campo "_id" com um id único.
 
-ID: API-CT010 
+ID: API-CT011 
 Título: Validar cadastro após editar usuário inexistente com um email já utilizado no sistema. 
 Método: PUT 
 Endpoint: {{baseUrl}}/usuarios/{_id}
