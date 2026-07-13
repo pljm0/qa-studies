@@ -1,6 +1,6 @@
 Plano de Testes
 
-Projeto: ServeRest API - Login e Usuários
+Projeto: ServeRest API - Usuários
 Sprint/Release: Sprint 1
 Endpoints incluídos:
 GET /usuarios
