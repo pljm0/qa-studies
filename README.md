@@ -1,34 +1,134 @@
-# QA Studies
+# 🧪 QA Studies
 
-Repositório dedicado aos meus estudos e projetos práticos em **Quality Assurance (QA)**.
+Repositório dedicado aos meus estudos e projetos práticos em **Quality Assurance (QA)**, com foco em testes manuais, testes de APIs, automação de testes e integração contínua.
 
-Aqui reúno documentações, casos de teste, execuções, evidências, bug reports e automações desenvolvidas durante minha evolução na área de testes de software.
+---
 
-## 📁 Estrutura
+# 🎯 Objetivos
 
-- `projetos/` — projetos práticos de QA com documentação e automação.
+- Consolidar conhecimentos em Quality Assurance;
+- Aplicar técnicas de projeto de testes;
+- Desenvolver projetos de automação;
+- Documentar casos de teste e evidências;
+- Simular cenários encontrados no mercado.
 
-## 🧪 Conteúdos abordados
+---
 
-- Testes manuais e funcionais
-- Histórias de usuário
-- Planos de teste
-- Casos de teste
-- Execução de testes
-- Evidências
-- Bug Reports
-- Testes de API com Postman
-- Automação de testes com Cypress
+# 📂 Projetos
 
-## 🎯 Objetivo
+## 🔹 Portfólio - ServeRest API
 
-Consolidar meus conhecimentos em QA por meio de projetos práticos, simulando atividades realizadas em um processo real de testes de software.
+Projeto de automação de testes da API **ServeRest** utilizando Postman e Newman.
 
-## 🛠️ Ferramentas
+### Principais tópicos
 
-- Google Chrome
+- Testes funcionais de API
+- CRUD
+- Validação de Status Codes
+- Validação de Payloads
+- Variáveis de Collection e Environment
+- Scripts de Pre-request e Tests
+- Fluxos de autenticação
+- Casos de teste documentados
+- Integração Contínua (GitHub Actions)
+
+### Stack
+
 - Postman
+- Newman
+- JavaScript
+- Swagger
+- GitHub Actions
+
+---
+
+## 🔹 Portfólio - SauceDemo Web
+
+Projeto de automação **End-to-End (E2E)** utilizando Cypress.
+
+### Principais tópicos
+
+- Testes E2E
+- Fluxo de compra  <!-- Colocar depois Page Object Model (POM), Validação de ordenação, Custom Commands e Fixtures etc -->
+- Integração Contínua (GitHub Actions)
+
+### Stack
+
 - Cypress
 - JavaScript
-- Markdown
-- Git/GitHub
+- Mocha
+- Mochawesome
+- GitHub Actions
+
+---
+
+# 💻 Tecnologias
+
+- JavaScript
+- Cypress
+- Postman
+- Newman
+- Git
+- GitHub
+- GitHub Actions
+- Swagger
+- SQL
+- Scrum
+
+---
+
+# 📁 Estrutura
+
+```text
+qa-studies/
+│
+├── 📁 Projetos
+│   │
+│   ├── 📁 Portfólio - ServeRest API
+│   │
+│   └── 📁 Portfólio - SauceDemo Web
+│
+└── README.md
+```
+
+---
+
+# ✅ Competências Demonstradas
+
+- Planejamento de testes
+- Elaboração de casos de teste
+- Testes exploratórios
+- Testes de API
+- Testes End-to-End (E2E)
+- Automação de testes
+- Integração Contínua (CI)
+- Geração de relatórios
+
+---
+
+# 🚀 Como executar
+
+## ServeRest API
+
+```bash
+newman run collection.json
+```
+
+## SauceDemo Web
+
+```bash
+npm install
+npx cypress open
+```
+
+ou
+
+```bash
+npx cypress run
+```
+
+---
+
+# 👨‍💻 Autor
+
+**Pedro Lourenço**
