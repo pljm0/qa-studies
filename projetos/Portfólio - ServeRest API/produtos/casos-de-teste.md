@@ -123,7 +123,7 @@ Título: Excluir um produto usando id inválido.
 Método: DELETE 
 Endpoint: {{baseUrl}}/produtos/{_id} 
 Pré-Condições: Fazer login, autenticar com um usuário administrador e possuir um id inválido.
-Status Esperado: 400 Bad Request
+Status Esperado: 200 OK
 Resultado Esperado: Retornar um objeto json com uma mensagem "Nenhum registro excluído".
 
 ID: API-CT015
@@ -173,7 +173,7 @@ Resultado Esperado: Retornar um objeto json com uma mensagem "Cadastro realizado
 
 ID: API-CT020
 
-Título: Validar cadastro de produto utilizando nome repetido.
+Título: Validar cadastro de produto utilizando nome repetido ao tentar editar.
 Método: PUT 
 Endpoint: {{baseUrl}}/produtos/{_id}
 Pré-Condições: Fazer login e autenticar com um usuário administrador.
