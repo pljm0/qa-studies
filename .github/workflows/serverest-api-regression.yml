@@ -25,7 +25,7 @@ jobs:
       - name: Execute API tests
         working-directory: newman-actions
         run: |
-          npx newman run postman/ServeRestAPI - Regression.postman_collection.json \
+          npx newman run postman/ServeRestAPI-Regression.postman_collection.json \
           -e postman/ServeRest.postman_environment.json \
           -r cli,htmlextra \
           --reporter-htmlextra-export newman-report.html    
