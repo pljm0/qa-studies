@@ -51,14 +51,16 @@ Projeto de automação **End-to-End (E2E)** utilizando Cypress.
 ### Principais tópicos
 
 - Testes E2E
-- Fluxo de compra  <!-- Colocar depois Page Object Model (POM), Validação de ordenação, Custom Commands e Fixtures etc -->
+- Fluxo de compra  
 - Integração Contínua (GitHub Actions)
+- Page Object Model (POM)
+- Fixtures
+- Custom Commands
 
 ### Stack
 
 - Cypress
 - JavaScript
-- Mocha
 - Mochawesome
 - GitHub Actions
 
