@@ -31,6 +31,8 @@ Projeto de automação de testes da API **ServeRest** utilizando Postman e Newma
 - Fluxos de autenticação
 - Casos de teste documentados
 - Integração Contínua (GitHub Actions)
+- Smoke Tests
+- Testes de Regressão
 
 ### Stack
 
