@@ -1,0 +1,38 @@
+name: Regression Tests - ServeRest API
+on:
+  pull_request:
+    branches: [ main ]
+    
+  schedule:
+    - cron: "0 5 * * *"
+    
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        
+      - name: Configure Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Newman run
+        working-directory: newman-actions
+        run: npm ci
+
+      - name: Execute API tests
+        working-directory: newman-actions
+        run: |
+          npx newman run postman/ServeRestAPI - Regression.postman_collection.json \
+          -e postman/ServeRest.postman_environment.json \
+          -r cli,htmlextra \
+          --reporter-htmlextra-export newman-report.html    
+
+      - name: Upload newman report
+        uses: actions/upload-artifact@v4
+        with:
+          name: newman-report
+          path: newman-actions/newman-report.html
+          if-no-files-found: ignore   

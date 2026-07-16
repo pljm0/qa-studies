@@ -1,10 +1,7 @@
-name: API End-to-end tests
+name: Smoke Tests - ServeRest API
 on:
   push:
-    branches: [ dev ]
-
-  pull_request:
-    branches: [ main ]
+    branches: "**"
     
 jobs:
   api-tests:
@@ -25,7 +22,7 @@ jobs:
       - name: Execute API tests
         working-directory: newman-actions
         run: |
-          npx newman run postman/ServeRestAPI.postman_collection.json \
+          npx newman run postman/ServeRestAPI - Smoke.postman_collection.json \
           -e postman/ServeRest.postman_environment.json \
           -r cli,htmlextra \
           --reporter-htmlextra-export newman-report.html    

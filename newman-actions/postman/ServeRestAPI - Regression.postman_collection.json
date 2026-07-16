@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "6ad2b540-c950-4548-92b5-a9015576609d",
-    "name": "ServeRestAPI",
+    "name": "ServeRestAPI - Regression",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "56160540",
     "_collection_link": "https://go.postman.co/collection/56160540-6ad2b540-c950-4548-92b5-a9015576609d?source=collection_link"
