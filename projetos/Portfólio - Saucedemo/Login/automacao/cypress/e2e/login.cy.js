@@ -1,53 +1,52 @@
-describe('Saucedemo - Login', () => {
-  
-  it('CT-001 - Efetuar login com username e senha válidos.', () => {
-    cy.visit('https://www.saucedemo.com')
-    cy.get('[data-test="username"]').type("standard_user")
-    cy.get('[data-test="password"]').type("secret_sauce")
-    cy.get('[data-test="login-button"]').click()
+import LoginPage from '../pages/LoginPage'
+import InventoryPage from '../pages/InventoryPage'
 
-    cy.url().should("include", "inventory.html")
+describe('Saucedemo - Login', () => {
+  let data;
+
+  before(() => {
+    cy.fixture("usuarios").then((fixture) => {
+      data = fixture;
+    })
+  })
+ 
+  beforeEach(() => {
+    LoginPage.visit()
+    LoginPage.validatePage()
+  })
+
+  it('CT-001 - Efetuar login com username e senha válidos.', () => {
+    LoginPage.login(data.standardUser)
+    InventoryPage.validatePage()
   })
   
   it('CT-002 - Exibir mensagem de erro ao deixar campo username vazio.', () => {
-    cy.visit('https://www.saucedemo.com')
-    cy.get('[data-test="password"]').type("secret_sauce")
-    cy.get('[data-test="login-button"]').click()
-
-    cy.get('[data-test="error"]').should("contain", "Username is required")
+    LoginPage.fillPassword(data.standardUser.password)
+    LoginPage.clickLogin()
+    LoginPage.validateErrorMessage(data.messages.usernameRequired)
   })
 
     it('CT-003 - Exibir mensagem de erro ao deixar campo password vazio.', () => {
-    cy.visit('https://www.saucedemo.com')
-    cy.get('[data-test="username"]').type("standard_user")
-    cy.get('[data-test="login-button"]').click()
-
-    cy.get('[data-test="error"]').should("contain", "Password is required")
+    LoginPage.fillUsername(data.standardUser.username)
+    LoginPage.clickLogin()
+    LoginPage.validateErrorMessage(data.messages.passwordRequired)
   })
 
     it('CT-004 - Exibir mensagem de erro ao deixar campo username e campo password vazio.', () => {
-    cy.visit('https://www.saucedemo.com')
-    cy.get('[data-test="login-button"]').click()
-
-    cy.get('[data-test="error"]').should("contain", "Username is required")
+    LoginPage.clickLogin()
+    LoginPage.validateErrorMessage(data.messages.usernameRequired)
   })
 
     it('CT-005 - Exibir mensagem de erro ao inserir username válido e password inválida.', () => {
-    cy.visit('https://www.saucedemo.com')
-    cy.get('[data-test="username"]').type("standard_user")
-    cy.get('[data-test="password"]').type("123")
-    cy.get('[data-test="login-button"]').click()
-
-    cy.get('[data-test="error"]').should("contain", "Username and password do not match any user in this service")
+    LoginPage.fillUsername(data.standardUser.username)
+    LoginPage.fillPassword(data.invalidUser.password)
+    LoginPage.clickLogin()
+    LoginPage.validateErrorMessage(data.messages.invalidCredentials)
   })
 
     it('CT-006 - Exibir mensagem de erro ao tentar logar com conta bloqueada.', () => {
-    cy.visit('https://www.saucedemo.com')
-    cy.get('[data-test="username"]').type("locked_out_user")
-    cy.get('[data-test="password"]').type("secret_sauce")
-    cy.get('[data-test="login-button"]').click()
-
-    cy.get('[data-test="error"]').should("contain", "Sorry, this user has been locked out.")
+    cy.login(data.lockedOutUser)
+    LoginPage.validateErrorMessage(data.messages.lockedUser)
   })
 
 })
