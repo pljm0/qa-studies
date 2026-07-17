@@ -1,0 +1,25 @@
+{
+
+    "standardUser": {
+        "username": "standard_user",
+        "password": "secret_sauce"
+    },
+
+    "lockedOutUser": {
+        "username": "locked_out_user",
+        "password": "secret_sauce"
+    },
+
+    "invalidUser": {
+        "username": "invalid_user",
+        "password": "invalid_password"
+    },
+
+    "messages": {
+        "usernameRequired": "Username is required",
+        "passwordRequired": "Password is required",
+        "invalidCredentials": "Username and password do not match any user in this service",
+        "lockedUser": "Sorry, this user has been locked out."
+    }
+
+}

@@ -19,21 +19,63 @@ describe('Saucedemo - Produtos', () => {
 
   it('CT-003 - Validar a ordenação de produtos por nome em ordem alfabética crescente.', () => {
     cy.get(".inventory_item_name").then(($itens) => {
-    const listaTela = []
-    const listaOrdenada = []
+      const listaTela = [];
 
-    $itens.each((index, item) => {
+      $itens.each((index, item) => {
+        listaTela.push(item.innerText);
+      });
 
-      listaTela.push(item.innerText)
-      listaOrdenada.push(item.innerText)
+    const listaOrdenada = [...listaTela].sort();
 
-    })
-
-    listaOrdenada.sort()
-
-    expect(listaTela).to.deep.equal(listaOrdenada)
-    })
+    expect(listaTela).to.deep.equal(listaOrdenada);
+    });
 
   }) 
 
-})
+  it('CT-004 - Validar a ordenação de produtos por nome em ordem alfabética decrescente.', () => {
+    cy.get('[data-test="product-sort-container"]').select("za")
+    cy.get(".inventory_item_name").then(($itens) => {
+      const listaTela = [];
+
+      $itens.each((index, item) => {
+        listaTela.push(item.innerText);
+      });
+
+    const listaOrdenada = [...listaTela].sort().reverse();
+
+    expect(listaTela).to.deep.equal(listaOrdenada);
+    });
+
+  }) 
+
+  it('CT-005 - Validar a ordenação de produtos por preço em ordem crescente.', () => {
+    cy.get('[data-test="product-sort-container"]').select("lohi")
+    cy.get(".inventory_item_price").then(($itens) => {
+      const listaTela = [];
+
+      $itens.each((index, item) => {
+        listaTela.push(item.innerText.replace("$", ""));
+      });
+
+      const listaOrdenada = [...listaTela].sort((a, b) => (a - b));
+
+      expect(listaTela).to.deep.equal(listaOrdenada);
+    });
+  });
+
+  it('CT-006 - Validar a ordenação de produtos por preço em ordem decrescente.', () => {
+    cy.get('[data-test="product-sort-container"]').select("hilo")
+    cy.get(".inventory_item_price").then(($itens) => {
+      const listaTela = [];
+
+      $itens.each((index, item) => {
+        listaTela.push(item.innerText.replace("$", ""));   
+      });
+
+      const listaOrdenada = [...listaTela].sort((a, b) => (b - a));
+
+      expect(listaTela).to.deep.equal(listaOrdenada);
+    })
+  })
+
+});
