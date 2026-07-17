@@ -18,8 +18,8 @@ Last Name: Teste
 Postal Code: 11111111  
 8. Clicar em "Continue"  
 
-Esperado: O sistema deve permitir o preenchimento dos campos "First Name", "Last Name" e "Postal Code". Após clicar em "Continue", o usuário deve ser redirecionado ao resumo da compra
-Obtido: O campo "Last Name" não permite inserir texto. Mesmo com o campo vazio, ao clicar no botão "Continue", o sistema redireciona para a página de resumo de compra permitindo prosseguir sem o preenchimento de um campo obrigatório.  
+Esperado: O sistema deve permitir o preenchimento dos campos "First Name", "Last Name" e "Postal Code". Após clicar em "Continue", o usuário deve ser redirecionado ao resumo da compra.  
+Obtido: O campo "Last Name" não permite inserir texto. Mesmo com o campo vazio, ao clicar no botão "Continue", o sistema redireciona para a página de resumo de compra permitindo prosseguir sem o preenchimento de um campo obrigatório.    
 
 Severidade: Alta  
 Prioridade: Alta  
