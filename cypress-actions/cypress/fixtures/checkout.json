@@ -1,0 +1,9 @@
+{
+
+    "validCheckOut": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "postalCode": "12345678"
+    }
+
+}
