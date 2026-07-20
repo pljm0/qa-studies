@@ -1,0 +1,180 @@
+# 🧪 ServeRestAPI 
+
+Projeto de automação de testes de API utilizando **Postman** e **Newman**, desenvolvido com foco em validar os principais endpoints da API **ServeRest** através de testes funcionais, Smoke Tests e Regression Tests, com execução automatizada via **GitHub Actions** e geração de relatórios HTML.
+
+---
+
+## 📌 Objetivos
+
+- Validar os principais endpoints da API ServeRest;
+- Automatizar cenários positivos e negativos;
+- Separar Smoke Tests e Regression Tests;
+- Executar os testes via Newman;
+- Gerar relatórios HTML automaticamente;
+- Integrar a execução ao GitHub Actions.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- Postman
+- Newman
+- Node.js
+- GitHub Actions
+- HTML Extra Reporter
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+ServeRestAPI/
+│
+├── postman/
+│   ├── ServeRestAPI-Smoke.postman_collection.json
+│   ├── ServeRestAPI-Regression.postman_collection.json
+│   └── ServeRest.postman_environment.json
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+## 📋 Cobertura dos Testes
+
+Os testes contemplam operações essenciais da API, incluindo:
+
+- Cadastro de usuários;
+- Login;
+- Consulta de usuários;
+- Cadastro de produtos;
+- Consulta de produtos;
+- Validações de respostas HTTP;
+- Validação de payloads;
+- Cenários positivos;
+- Cenários negativos;
+- Validação de mensagens de erro.
+
+---
+
+# 🔥 Smoke Tests
+
+Os Smoke Tests possuem como objetivo validar rapidamente se as principais funcionalidades da API estão operando corretamente após uma alteração.
+
+### Fluxos contemplados
+
+- Cadastro de usuário;
+- Login;
+- Consulta de usuário;
+- Cadastro de produto;
+- Consulta de produto.
+
+### Executar via Newman
+
+```bash
+npx newman run postman/ServeRestAPI-Smoke.postman_collection.json \
+-e postman/ServeRest.postman_environment.json
+```
+
+---
+
+# 🔄 Regression Tests
+
+A suíte de regressão possui uma cobertura mais ampla, validando diversos cenários da aplicação.
+
+Inclui:
+
+- Casos positivos;
+- Casos negativos;
+- Validação de códigos HTTP;
+- Validação de mensagens;
+- Validação de regras de negócio;
+- Casos de erro;
+- Regressão completa da API.
+
+### Executar via Newman
+
+```bash
+npx newman run postman/ServeRestAPI-Regression.postman_collection.json \
+-e postman/ServeRest.postman_environment.json
+```
+
+---
+
+# ▶️ Como Executar
+
+## 1. Clone o repositório
+
+```bash
+git clone https://github.com/pljm0/qa-studies.git
+```
+
+## 2. Acesse o projeto
+
+```bash
+cd Projetos/ServeRestAPI
+```
+
+## 3. Instale as dependências
+
+```bash
+npm install
+```
+
+## 4. Execute os Smoke Tests
+
+```bash
+npm run smoke
+```
+
+## 5. Execute os Regression Tests
+
+```bash
+npm run regression
+```
+
+---
+
+# 📊 Relatórios
+
+Os testes são executados utilizando o **Newman HTML Extra Reporter**, gerando automaticamente um relatório HTML contendo:
+
+- Cenários executados;
+- Status dos testes;
+- Tempo de execução;
+- Assertions;
+- Requests;
+- Responses.
+
+---
+
+# ⚙️ Integração Contínua
+
+Este projeto possui integração com **GitHub Actions**, realizando automaticamente:
+
+- Instalação das dependências;
+- Execução dos testes;
+- Geração do relatório HTML;
+- Upload do relatório como Artifact.
+
+---
+
+# 🎯 Boas Práticas Aplicadas
+
+- Organização das Collections;
+- Separação entre Smoke e Regression;
+- Uso de Environment;
+- Variáveis de ambiente;
+- Assertions automatizadas;
+- Relatórios HTML;
+- Integração contínua com GitHub Actions.
+
+---
+
+# 👨‍💻 Autor
+
+Pedro Lourenço
+
+GitHub: https://github.com/pljm0
