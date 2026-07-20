@@ -1,4 +1,4 @@
-# 🧪 ServeRest API
+# 🧪 ServeRestAPI
 
 Projeto de automação de testes de API desenvolvido utilizando **Postman** e **Newman**, com foco na validação funcional dos principais endpoints da API **ServeRest**.
 
@@ -195,20 +195,6 @@ Após cada execução utilizando o Newman, é gerado automaticamente um relatór
 
 ---
 
-# ⚙️ Integração Contínua
-
-O projeto utiliza **GitHub Actions** para automatizar a execução dos testes.
-
-O workflow realiza automaticamente:
-
-- Checkout do projeto;
-- Instalação das dependências;
-- Execução das Collections;
-- Geração do relatório HTML;
-- Upload do relatório como Artifact.
-
----
-
 # 📚 Boas Práticas Aplicadas
 
 - Organização das Collections;
@@ -234,6 +220,3 @@ O workflow realiza automaticamente:
 ## 👨‍💻 Autor
 
 **Pedro Lourenço**
-
-- GitHub: https://github.com/pljm0
-- LinkedIn: *(adicione o link do seu perfil aqui)*
