@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "test:smoke": "cypress run --spec \"cypress/e2e/smoke/*.cy.js\"",
+    "test:regression": "cypress run --spec \"cypress/e2e/regression/*.cy.js\"",
+    "test:all": "cypress run"
   },
   "author": "",
   "license": "ISC",

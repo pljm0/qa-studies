@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "smoke": "newman run postman/ServeRestAPI-Smoke.postman_collection.json -e postman/ServeRest.postman_environment.json",
+    "regression": "newman run postman/ServeRestAPI-Regression.postman_collection.json -e postman/ServeRest.postman_environment.json"
   },
   "author": "",
   "license": "ISC",
