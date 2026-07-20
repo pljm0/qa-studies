@@ -16,7 +16,7 @@ jobs:
           node-version: 20
 
       - name: Newman run
-        working-directory: newman-actions
+        working-directory: ServeRestAPI
         run: npm ci
 
       - name: Execute API tests
