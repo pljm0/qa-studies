@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Execute API tests
-        working-directory: newman-actions
+        working-directory: ServeRestAPI
         run: |
           npx newman run postman/ServeRestAPI-Regression.postman_collection.json \
           -e postman/ServeRest.postman_environment.json \
@@ -36,5 +36,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: newman-report
-          path: newman-actions/newman-report.html
+          path: ServeRestAPI/newman-report.html
           if-no-files-found: ignore   
