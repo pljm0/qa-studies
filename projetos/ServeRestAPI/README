@@ -1,21 +1,38 @@
-# 🧪 ServeRestAPI 
+# 🧪 ServeRest API
 
-Projeto de automação de testes de API utilizando **Postman** e **Newman**, desenvolvido com foco em validar os principais endpoints da API **ServeRest** através de testes funcionais, Smoke Tests e Regression Tests, com execução automatizada via **GitHub Actions** e geração de relatórios HTML.
+Projeto de automação de testes de API desenvolvido utilizando **Postman** e **Newman**, com foco na validação funcional dos principais endpoints da API **ServeRest**.
+
+O projeto contempla a criação e execução de **Smoke Tests** e **Regression Tests**, geração de relatórios HTML e integração contínua utilizando **GitHub Actions**.
 
 ---
 
-## 📌 Objetivos
+## 📖 Sobre o Projeto
 
-- Validar os principais endpoints da API ServeRest;
+A **ServeRest** é uma API REST utilizada para estudos e prática de testes de software.
+
+Este projeto tem como objetivo demonstrar conhecimentos em:
+
+- Testes de API
+- Criação de Collections no Postman
+- Automação com Newman
+- Organização de suítes de testes
+- Integração Contínua (CI)
+- Geração de relatórios
+
+---
+
+## 🎯 Objetivos
+
+- Validar os principais endpoints da API;
 - Automatizar cenários positivos e negativos;
-- Separar Smoke Tests e Regression Tests;
-- Executar os testes via Newman;
+- Separar os testes em Smoke e Regression;
+- Executar testes via Newman;
 - Gerar relatórios HTML automaticamente;
-- Integrar a execução ao GitHub Actions.
+- Automatizar a execução utilizando GitHub Actions.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 - Postman
 - Newman
@@ -25,7 +42,7 @@ Projeto de automação de testes de API utilizando **Postman** e **Newman**, des
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```text
 ServeRestAPI/
@@ -42,36 +59,58 @@ ServeRestAPI/
 
 ---
 
-## 📋 Cobertura dos Testes
+## ✅ Cobertura dos Testes
 
-Os testes contemplam operações essenciais da API, incluindo:
+Os testes contemplam os principais recursos disponibilizados pela API.
 
-- Cadastro de usuários;
-- Login;
-- Consulta de usuários;
-- Cadastro de produtos;
-- Consulta de produtos;
-- Validações de respostas HTTP;
-- Validação de payloads;
-- Cenários positivos;
-- Cenários negativos;
-- Validação de mensagens de erro.
+### Usuários
+
+- Cadastro de usuário
+- Consulta de usuário
+- Validação de dados
+- Cenários negativos
+
+### Login
+
+- Login válido
+- Login inválido
+- Validação de autenticação
+
+### Produtos
+
+- Cadastro de produto
+- Consulta de produtos
+- Validação de respostas
+
+### Validações
+
+- Status Code
+- Tempo de resposta
+- Estrutura do JSON
+- Conteúdo da resposta
+- Mensagens de erro
 
 ---
 
 # 🔥 Smoke Tests
 
-Os Smoke Tests possuem como objetivo validar rapidamente se as principais funcionalidades da API estão operando corretamente após uma alteração.
+A suíte de Smoke Tests valida rapidamente as funcionalidades críticas da API, garantindo que ela esteja operacional após uma nova alteração.
 
-### Fluxos contemplados
+### Funcionalidades
 
-- Cadastro de usuário;
-- Login;
-- Consulta de usuário;
-- Cadastro de produto;
-- Consulta de produto.
+- Cadastro de usuário
+- Login
+- Consulta de usuário
+- Cadastro de produto
+- Consulta de produto
 
-### Executar via Newman
+### Executar
+
+```bash
+npm run smoke
+```
+
+Ou diretamente pelo Newman:
 
 ```bash
 npx newman run postman/ServeRestAPI-Smoke.postman_collection.json \
@@ -82,19 +121,24 @@ npx newman run postman/ServeRestAPI-Smoke.postman_collection.json \
 
 # 🔄 Regression Tests
 
-A suíte de regressão possui uma cobertura mais ampla, validando diversos cenários da aplicação.
+A suíte de Regressão possui uma cobertura funcional mais completa.
 
 Inclui:
 
-- Casos positivos;
-- Casos negativos;
-- Validação de códigos HTTP;
-- Validação de mensagens;
+- Cenários positivos;
+- Cenários negativos;
+- Validação de Status Code;
+- Validação de payload;
 - Validação de regras de negócio;
-- Casos de erro;
-- Regressão completa da API.
+- Validação de mensagens de erro.
 
-### Executar via Newman
+### Executar
+
+```bash
+npm run regression
+```
+
+Ou diretamente pelo Newman:
 
 ```bash
 npx newman run postman/ServeRestAPI-Regression.postman_collection.json \
@@ -103,7 +147,7 @@ npx newman run postman/ServeRestAPI-Regression.postman_collection.json \
 
 ---
 
-# ▶️ Como Executar
+# ▶️ Como Executar o Projeto
 
 ## 1. Clone o repositório
 
@@ -111,7 +155,7 @@ npx newman run postman/ServeRestAPI-Regression.postman_collection.json \
 git clone https://github.com/pljm0/qa-studies.git
 ```
 
-## 2. Acesse o projeto
+## 2. Acesse a pasta do projeto
 
 ```bash
 cd Projetos/ServeRestAPI
@@ -139,42 +183,57 @@ npm run regression
 
 # 📊 Relatórios
 
-Os testes são executados utilizando o **Newman HTML Extra Reporter**, gerando automaticamente um relatório HTML contendo:
+Após cada execução utilizando o Newman, é gerado automaticamente um relatório HTML contendo:
 
 - Cenários executados;
-- Status dos testes;
+- Testes aprovados;
+- Testes reprovados;
 - Tempo de execução;
-- Assertions;
 - Requests;
-- Responses.
+- Responses;
+- Assertions.
 
 ---
 
 # ⚙️ Integração Contínua
 
-Este projeto possui integração com **GitHub Actions**, realizando automaticamente:
+O projeto utiliza **GitHub Actions** para automatizar a execução dos testes.
 
+O workflow realiza automaticamente:
+
+- Checkout do projeto;
 - Instalação das dependências;
-- Execução dos testes;
+- Execução das Collections;
 - Geração do relatório HTML;
 - Upload do relatório como Artifact.
 
 ---
 
-# 🎯 Boas Práticas Aplicadas
+# 📚 Boas Práticas Aplicadas
 
 - Organização das Collections;
 - Separação entre Smoke e Regression;
-- Uso de Environment;
-- Variáveis de ambiente;
+- Utilização de Environment;
+- Uso de variáveis;
 - Assertions automatizadas;
 - Relatórios HTML;
-- Integração contínua com GitHub Actions.
+- Integração Contínua com GitHub Actions.
 
 ---
 
-# 👨‍💻 Autor
+# 🚀 Melhorias Futuras
 
-Pedro Lourenço
+- Testes de autenticação JWT;
+- Execução em múltiplos ambientes;
+- Massa de dados dinâmica;
+- Testes de Performance com JMeter;
+- Integração com Docker.
 
-GitHub: https://github.com/pljm0
+---
+
+## 👨‍💻 Autor
+
+**Pedro Lourenço**
+
+- GitHub: https://github.com/pljm0
+- LinkedIn: *(adicione o link do seu perfil aqui)*
