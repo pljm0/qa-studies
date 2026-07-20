@@ -1,5 +1,5 @@
-import CheckoutPage from '../pages/CheckoutPage'
-import CartPage from '../pages/CartPage'
+import CheckoutPage from '../../pages/CheckoutPage'
+import CartPage from '../../pages/CartPage'
 
 let userData
 let checkoutData
