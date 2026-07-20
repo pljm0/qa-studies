@@ -9,12 +9,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
-
-      - name: Debug - listar estrutura
-        run: |
-          pwd
-          ls -la
-          find . -iname "*ServeRest*" -type d
         
       - name: Configure Node.js
         uses: actions/setup-node@v4
@@ -22,11 +16,11 @@ jobs:
           node-version: 20
 
       - name: Newman run
-        working-directory: Projetos/ServeRestAPI
+        working-directory: projetos/ServeRestAPI
         run: npm ci
 
       - name: Execute API tests
-        working-directory: Projetos/ServeRestAPI
+        working-directory: projetos/ServeRestAPI
         run: |
           npx newman run postman/ServeRestAPI-Smoke.postman_collection.json \
           -e postman/ServeRest.postman_environment.json \
@@ -37,5 +31,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: newman-report
-          path: Projetos/ServeRestAPI/newman-report.html
+          path: projetos/ServeRestAPI/newman-report.html
           if-no-files-found: ignore   
