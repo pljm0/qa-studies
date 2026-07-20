@@ -9,6 +9,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+
+      - name: Debug - listar estrutura
+        run: |
+          pwd
+          ls -la
+          find . -iname "*ServeRest*" -type d
         
       - name: Configure Node.js
         uses: actions/setup-node@v4
