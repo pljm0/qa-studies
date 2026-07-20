@@ -170,7 +170,7 @@ npm run test:regression
 git clone https://github.com/pljm0/qa-studies.git
 ```
 
-## 2. Acesse o projeto
+## 2. Acesse a pasta do projeto
 
 ```bash
 cd Projetos/SwagLabs
@@ -182,28 +182,28 @@ cd Projetos/SwagLabs
 npm install
 ```
 
-## 4. Abrir o Cypress
-
-```bash
-npm run cy:open
-```
-
-## 5. Executar todos os testes
-
-```bash
-npm run test:all
-```
-
-## 6. Executar apenas os Smoke Tests
+## 4. Execute os Smoke Tests
 
 ```bash
 npm run test:smoke
 ```
 
-## 7. Executar apenas os Regression Tests
+## 5. Execute os Regression Tests
 
 ```bash
 npm run test:regression
+```
+
+## 6. Execute toda a suíte de testes
+
+```bash
+npm run test:all
+```
+
+## 7. Abrir o Cypress (modo interativo)
+
+```bash
+npm run cy:open
 ```
 
 ---
