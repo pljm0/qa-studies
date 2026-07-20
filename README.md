@@ -16,7 +16,7 @@ Repositório dedicado aos meus estudos e projetos práticos em **Quality Assuran
 
 # 📂 Projetos
 
-## 🔹 Portfólio - ServeRest API
+## 🔹 ServeRest API
 
 Projeto de automação de testes da API **ServeRest** utilizando Postman e Newman.
 
@@ -44,7 +44,7 @@ Projeto de automação de testes da API **ServeRest** utilizando Postman e Newma
 
 ---
 
-## 🔹 Portfólio - SauceDemo Web
+## 🔹 SwagLabs Web
 
 Projeto de automação **End-to-End (E2E)** utilizando Cypress.
 
@@ -88,9 +88,9 @@ qa-studies/
 │
 ├── 📁 Projetos
 │   │
-│   ├── 📁 Portfólio - ServeRest API
+│   ├── 📁 ServeRestAPI
 │   │
-│   └── 📁 Portfólio - SauceDemo Web
+│   └── 📁 SwagLabs
 │
 └── README.md
 ```
@@ -107,29 +107,6 @@ qa-studies/
 - Automação de testes
 - Integração Contínua (CI)
 - Geração de relatórios
-
----
-
-# 🚀 Como executar
-
-## ServeRest API
-
-```bash
-newman run collection.json
-```
-
-## SauceDemo Web
-
-```bash
-npm install
-npx cypress open
-```
-
-ou
-
-```bash
-npx cypress run
-```
 
 ---
 
