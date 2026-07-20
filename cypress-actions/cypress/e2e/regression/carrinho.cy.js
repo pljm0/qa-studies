@@ -1,5 +1,5 @@
-import CartPage from '../pages/CartPage'
-import InventoryPage from '../pages/InventoryPage'
+import CartPage from '../../pages/CartPage'
+import InventoryPage from '../../pages/InventoryPage'
 
 describe('Saucedemo - Carrinho', () => {
   let data
