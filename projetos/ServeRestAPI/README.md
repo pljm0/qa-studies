@@ -131,6 +131,7 @@ Inclui:
 - Validação de payload;
 - Validação de regras de negócio;
 - Validação de mensagens de erro.
+- Execução automática diária às **02:00** da manhã por meio de um workflow agendado no GitHub Actions (`schedule`), garantindo a validação contínua da API.
 
 ### Executar
 

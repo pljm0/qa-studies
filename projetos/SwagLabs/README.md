@@ -153,6 +153,7 @@ Inclui:
 - Ordenações;
 - Fluxo completo de compra;
 - Reprodução de bugs conhecidos.
+- Execução automática diária às **02:00** da manhã por meio de um workflow agendado no GitHub Actions (`schedule`), garantindo a validação contínua da API.
 
 ### Executar
 
