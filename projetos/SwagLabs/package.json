@@ -8,7 +8,8 @@
     "cy:open": "cypress open",
     "test:smoke": "cypress run --spec \"cypress/e2e/smoke/*.cy.js\"",
     "test:regression": "cypress run --spec \"cypress/e2e/regression/*.cy.js\"",
-    "test:all": "cypress run"
+    "test:all": "cypress run",
+    "test:report": "cypress run && node qa-metrics/generate-metrics.js cypress/reports/index.json qa-dashboard/metrics.json"
   },
   "author": "",
   "license": "ISC",

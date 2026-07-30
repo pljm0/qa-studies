@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-07-30T01:50:47.532Z",
+  "totalTests": 24,
+  "passedPct": 100,
+  "passed": 24,
+  "failed": 0,
+  "skipped": 0,
+  "totalDurationSeconds": 26.68,
+  "avgDurationSeconds": 1.11,
+  "fastest": {
+    "title": "Saucedemo - Login CT-004 - Exibir mensagem de erro ao deixar campo username e campo password vazio.",
+    "seconds": 0.15
+  },
+  "slowest": {
+    "title": "Saucedemo - Smoke Tests Smoke - Validar fluxo principal",
+    "seconds": 3.4
+  },
+  "categories": [
+    {
+      "name": "carrinho",
+      "seconds": 3.77
+    },
+    {
+      "name": "checkout",
+      "seconds": 11.65
+    },
+    {
+      "name": "login",
+      "seconds": 3.5
+    },
+    {
+      "name": "produtos",
+      "seconds": 4.36
+    },
+    {
+      "name": "smoke",
+      "seconds": 3.4
+    }
+  ],
+  "coveragePct": 100
+}

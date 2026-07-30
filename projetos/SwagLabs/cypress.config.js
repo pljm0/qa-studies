@@ -9,7 +9,8 @@ module.exports = defineConfig({
     reportPageTitle: "SauceDemo Test Report",
     embeddedScreenshots: true,
     inlineAssets: true,
-    saveAllAttempts: false
+    saveAllAttempts: false,
+    saveJson: true
   },
 
   e2e: {
