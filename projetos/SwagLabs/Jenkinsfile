@@ -12,23 +12,29 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                dir('projetos/SwagLabs') {
+                    sh 'npm ci'
+                }
             }
         }
 
         stage('Cypress Run - Smoke') {
             steps {
-                sh 'npx cypress run --spec "cypress/e2e/smoke/*.cy.js" --reporter mochawesome'
+                dir('projetos/SwagLabs') {
+                    sh 'npx cypress run --spec "cypress/e2e/smoke/*.cy.js" --reporter mochawesome'
+                }
             }
         }
     }
 
     post {
         always {
-            junit allowEmptyResults: true, testResults: 'cypress/reports/*.xml'
-            archiveArtifacts artifacts: 'cypress/reports/**', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'cypress/screenshots/**', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'cypress/videos/**', allowEmptyArchive: true
+            dir('projetos/SwagLabs') {
+                junit allowEmptyResults: true, testResults: 'cypress/reports/*.xml'
+                archiveArtifacts artifacts: 'cypress/reports/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'cypress/screenshots/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'cypress/videos/**', allowEmptyArchive: true
+            }
         }
     }
 }
