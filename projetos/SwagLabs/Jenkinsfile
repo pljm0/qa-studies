@@ -5,6 +5,10 @@ pipeline {
         }
     }
 
+    environment {
+        CYPRESS_CACHE_FOLDER = '/root/.cache/Cypress'
+    }
+
     triggers {
         cron('H/30 * * * *')
     }
