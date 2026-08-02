@@ -22,7 +22,7 @@ pipeline {
         stage('Cypress Run - Smoke') {
             steps {
                 dir('projetos/SwagLabs') {
-                    sh 'npx cypress run --spec "cypress/e2e/smoke/*.cy.js" --reporter mochawesome'
+                    sh 'npx cypress run --spec "cypress/e2e/smoke/*.cy.js"'
                 }
             }
         }
