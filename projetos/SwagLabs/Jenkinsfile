@@ -1,0 +1,34 @@
+pipeline {
+    agent {
+        docker {
+            image 'cypress/included:15.13.1'
+        }
+    }
+
+    triggers {
+        cron('H/30 * * * *')
+    }
+
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm ci'
+            }
+        }
+
+        stage('Cypress Run - Smoke') {
+            steps {
+                sh 'npx cypress run --spec "cypress/e2e/smoke/*.cy.js" --reporter mochawesome'
+            }
+        }
+    }
+
+    post {
+        always {
+            junit allowEmptyResults: true, testResults: 'cypress/reports/*.xml'
+            archiveArtifacts artifacts: 'cypress/reports/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'cypress/screenshots/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'cypress/videos/**', allowEmptyArchive: true
+        }
+    }
+}
