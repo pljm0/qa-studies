@@ -6,6 +6,12 @@ O projeto automatiza os principais fluxos da aplicação **SauceDemo**, validand
 
 ---
 
+# 📊 Dashboard
+
+<img width="1213" height="676" alt="image" src="https://github.com/user-attachments/assets/dff9638a-b6cb-4089-bde2-643ff5396076" />
+
+---
+
 # 📖 Sobre o Projeto
 
 O **SauceDemo** é uma aplicação web utilizada para estudos e prática de automação de testes.
